@@ -81,6 +81,15 @@ module.exports = class ValidationFunctions {
     return /^(https?:\/\/)?([\w.-]+)\.([a-z]{2,6})(\/[^\s]*)?$/i.test(str);
   }
 
+
+  // Implemented isAscii function
+  static name(params) {
+    
+  } isAscii(str) {
+    return /^[\x00-\x7F]*$/.test(str);
+}
+
+
   static isDate(dateStr) {
     if (!dateStr || typeof dateStr !== "string") return false;
 
